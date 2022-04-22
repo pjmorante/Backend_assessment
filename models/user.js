@@ -11,12 +11,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     require: true,   
   },
-  notes: [
-    {
+  favs: [{
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Note'
-    }
-  ],
+      ref: 'Favs'
+    }]
 })
 
 userSchema.set('toJSON', {
